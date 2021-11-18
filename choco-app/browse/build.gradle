@@ -1,0 +1,71 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+}
+
+android {
+    compileSdkVersion AppProperties.compileSdkVersion
+    buildToolsVersion AppProperties.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion AppProperties.minSdkVersion
+        targetSdkVersion AppProperties.targetSdkVersion
+        versionCode AppProperties.versionCode
+        versionName AppProperties.versionName
+
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = AppProperties.jvmTarget
+    }
+}
+
+dependencies {
+    implementation project(":core-ui")
+    implementation project(":core")
+    implementation Dependencies.kotlinStd
+    implementation Dependencies.androidCoreKtx
+    implementation Dependencies.appCompat
+    implementation Dependencies.googleMaterial
+    implementation Dependencies.retrofit
+    implementation Dependencies.gson
+    implementation Dependencies.koinAndroid
+    implementation Dependencies.lifeCycleViewModel
+    implementation Dependencies.lifeCycleRuntime
+    implementation Dependencies.liveData
+    implementation Dependencies.coroutinesCore
+    implementation Dependencies.coroutinesAndroid
+    implementation Dependencies.navFragment
+    implementation Dependencies.swipeRefresh
+    implementation Dependencies.room
+    implementation Dependencies.roomRuntime
+    kapt Dependencies.roomCompiler
+    testImplementation project(":test")
+    testImplementation Dependencies.jUnit
+    testImplementation Dependencies.androidJUnitExt
+    testImplementation Dependencies.androidXcoreTesting
+    testImplementation Dependencies.mockitoKotlin
+    testImplementation Dependencies.robolectric
+    testImplementation Dependencies.coroutinesTest
+    testImplementation Dependencies.mockK
+    testImplementation Dependencies.mockKotlin
+    testImplementation Dependencies.testRunner
+}

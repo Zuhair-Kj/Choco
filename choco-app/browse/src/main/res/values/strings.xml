@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_product_list">An error occurred while fetching the list of our fresh products.</string>
+    <string name="order">Order</string>
+    <string name="order_placed">Order #%s Placed</string>
+    <string name="order_failed">A problem encountered while placing your order</string>
+    <string name="placed_at">Placed at:</string>
+    <string name="empty_orders">No orders yet? Check out our product tab and we will make sure you are covered!</string>
+    <string name="error_orders_list">Sorry, we are unable to fetch your orders at the moment.</string>
+    <string name="total_formatted">Total: %d</string>
+</resources>

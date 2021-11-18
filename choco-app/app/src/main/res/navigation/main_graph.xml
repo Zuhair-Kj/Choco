@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/nav_bottom_products">
+
+    <fragment
+        android:id="@+id/nav_bottom_products"
+        android:name="com.choco.browse.view.fragment.ProductsFragment"
+        android:label="ProductsFragment"
+        tools:layout="@layout/fragment_products" />
+
+    <fragment
+        android:id="@+id/nav_bottom_orders"
+        android:name="com.choco.browse.view.fragment.OrdersListFragment"
+        android:label="OrdersListFragment"
+        tools:layout="@layout/fragment_orders_list"/>
+
+    <fragment
+        android:id="@+id/nav_bottom_profile"
+        android:name="com.choco.account.fragment.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

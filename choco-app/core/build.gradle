@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion AppProperties.compileSdkVersion
+    buildToolsVersion AppProperties.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion AppProperties.minSdkVersion
+        targetSdkVersion AppProperties.targetSdkVersion
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = AppProperties.jvmTarget
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/AL2.0'
+        exclude 'META-INF/LGPL2.1'
+        exclude("META-INF/*.kotlin_module")
+    }
+}
+
+dependencies {
+    implementation Dependencies.kotlinStd
+    implementation Dependencies.retrofit
+    implementation Dependencies.gson
+    implementation Dependencies.gsonConverter
+    implementation Dependencies.loggingInterceptor
+    implementation Dependencies.okhttp
+    implementation Dependencies.koinAndroid
+    implementation Dependencies.coroutinesAndroid
+    implementation Dependencies.coroutinesCore
+    implementation Dependencies.lifeCycleRuntime
+    implementation Dependencies.lifeCycleViewModel
+    testImplementation Dependencies.jUnit
+    testImplementation Dependencies.androidJUnitExt
+}

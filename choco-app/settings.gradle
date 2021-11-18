@@ -1,0 +1,6 @@
+rootProject.name = "Choco"
+include ':app', ':core', ':core-ui', ':auth'
+include ':browse'
+include ':account'
+include ':cache'
+include ':test'

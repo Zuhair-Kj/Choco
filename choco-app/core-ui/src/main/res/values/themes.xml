@@ -1,0 +1,62 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Choco" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="FormTextInputLayoutStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:minHeight">@dimen/text_field_min_height</item>
+        <item name="android:textColorHint">@color/grey_seventy_percent</item>
+        <item name="errorTextColor">@color/red</item>
+    </style>
+
+    <style name="FormTextInputEditText">
+        <item name="android:background">@null</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHighlight">@color/blue_lighter</item>
+    </style>
+
+    <style name="ButtonSubmit" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@color/blue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="SubTitleText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Paragraph" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:textColor">@color/grey_fifty_percent</item>
+    </style>
+
+    <style name="Date" parent="Paragraph">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="FullScreenLabel" parent="Widget.MaterialComponents.TextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="CardView.Browse">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">@dimen/margin_trivial</item>
+    </style>
+</resources>
