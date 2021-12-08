@@ -45,5 +45,4 @@ Would be happy to go through it over a friendly chat.
 
 
 ** Testing ** 
-- The time was up before I could write UI test. 
 - Unit test for model layer and viewmodel layer with proper dispatchers swapping.
