@@ -1,10 +1,15 @@
 # CHOCO app
 ![2021-11-12 23 56 15](https://user-images.githubusercontent.com/9511896/141496199-5ae9df8f-363a-4280-85e2-ef95d1c0d77f.gif)
 
+** Login Credentials:**
+
+**User:** user@choco.com
+
+**Password:** chocorian
  
 **Branding**
 
-- Stole colors and styles from Google play photos.
+- Copied colors and styles from Google play photos.
 
 **Modules**
 
